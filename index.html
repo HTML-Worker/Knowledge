@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>知识库</title>
+    <!--<link rel="stylesheet" href="css/_projector.scss">-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body ng-app="start" style="font-family: 'Microsoft YaHei UI';" ng-view>
+    <div class="bg-img">
+        <div class="main-warp" style="position: relative">
+            <div class="header">
+                <div class="logo" ></div>
+
+                <div class="login">
+                    <img src="img/user.png">
+                    <a href="#">请登录</a>
+                </div>
+            </div>
+
+            <div class="logo2">
+                <img src="img/gridsum.png">
+            </div>
+
+            <div class="row" ng-controller="ViewCtrl" style="z-index: 1;">
+                <div>
+                    <div class="col-md-3">
+                        <div class="round" ng-click="viewObject.toShowView('buildViewShow')" ng-dblclick="toBuildUrl()">
+                            <div class="img1"></div>
+                        </div>
+                        <div class="img img-review"></div>
+                        <div class="view view1" style="position: absolute;z-index: 1"><p>先例评审系统是先例生成的工作平台，该系统支撑先例的推荐、评审、发布工作。</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="round" ng-click="viewObject.toShowView('wareViewShow')" ng-dblclick="toWareUrl()">
+                            <div class="img2"></div>
+                        </div>
+                        <div class="img img-public"></div>
+                        <div class="view view2" style="position: absolute;z-index: 1"><p>先例发布网站是用户了解查看先例的平台。</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="round" ng-click="viewObject.toShowView('useViewShow')" ng-dblclick="toUseUrl()">
+                            <div class="img3"></div>
+                        </div>
+                        <div class="img img-know"></div>
+                        <div class="view view3" style="position: absolute;z-index: 1"><p>知产案例应用是先例及裁判文书的大数据分析和智能应用平台，提供智能检索、智能推送、案例遵循与参考等多种智能数据应用服务。</p></div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="round" ng-click="viewObject.toShowView('knowViewShow')" ng-dblclick="toKnowledgeUrl()">
+                            <div class="img4"></div>
+                        </div>
+                        <div class="img img-law"></div>
+                        <div class="view view4" style="position: absolute;z-index: 1"><p>法规知识库是法规及相关知识包的大数据分析和智能应用平台，纵览法条与先例、知产码和案例要旨的关联，反应先例对适用法律的规则变迁。</p></div>
+                    </div>
+                </div>
+                <div class="box" ng-if="!viewObject.viewShow.buildViewShow">
+                    <div class="out-border out-border-first">
+                        <div class="box-border box1-child" echarts-directive view-data="chartOptionBar" loader-directive load="viewObject.load.loadBar"></div>
+                    </div>
+                    <div class="out-border out-border-first">
+                        <div class="box-border box1-child" echarts-directive view-data="chartOptionGauge" loader-directive load="viewObject.load.loadGauge"></div>
+                    </div>
+                    <div class="out-border out-border-first">
+                        <div class="box-border box1-child" echarts-directive view-data="chartOptionPie" loader-directive load="viewObject.load.loadPie"></div>
+                    </div>
+                </div>
+                <div class="box" ng-if="!viewObject.viewShow.wareViewShow">
+                    <div class="out-border out-border-ware-first">
+                        <div class="box-border box2-child1" loader-directive load="viewObject.load.loadNum">
+                            <div class="num">
+                                <strong>先例发布数量</strong><h3>{{firstMember}}</h3>
+                                <strong>本月发布数量</strong><h3>{{monthMember}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="out-border out-border-ware"><div class="box-border box2-child2" echarts-directive view-data="chartOptionDomain" loader-directive load="viewObject.load.loadDomain"></div></div>
+                    <div class="out-border out-border-ware"><div class="box-border box2-child3" echarts-directive view-data="chartOptionGrade" loader-directive load="viewObject.load.loadGrade"></div></div>
+                </div>
+                <div>
+                    <div class="box box-size" ng-hide="viewObject.viewShow.useViewShow" loader-directive load="viewObject.load.loadUse">
+                        <div ng-repeat="item in arrayDataApp" class="box-border color-{{$index}}" >
+                            <strong>{{item.value}}个</strong>
+                            <h3>{{item.name}}</h3>
+                        </div>
+                    </div>
+                    <div class="box box-size" ng-hide="viewObject.viewShow.knowViewShow" loader-directive load="viewObject.load.loadKnow">
+                        <div ng-repeat="item in ayyayDataKnow" class="box-border color-{{$index}}" >
+                            <strong>{{item.value}}</strong>
+                            <h3>{{item.name}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular/angular-route.min.js"></script>
+    <script src="Angular/app.js"></script>
+
+    <script src="node_modules/echarts.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="Angular/Route/app.route.js"></script>
+
+    <script src="Angular/directive/echarts-directive.js"></script>
+    <script src="Angular/directive/loading.directive.js"></script>
+    <script src="Angular/Services/index.appService.js"></script>
+    <script src="Angular/Controller/index.ViewCtrl.js"></script>
+
+</body>
+</html>
