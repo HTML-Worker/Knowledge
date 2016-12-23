@@ -1,3 +1,269 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  color: white; }
 
+html {
+  font-size: 12px; }
+
+body {
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #333;
+  font-family: "Microsoft YaHei"; }
+  body .bg-img {
+    padding-right: 0;
+    padding-left: 0;
+    height: 768px;
+    width: 1366px;
+    background: url(../img/index-bg-main.png) no-repeat; }
+    body .bg-img .main-warp {
+      z-index: 0;
+      padding-right: 0;
+      padding-left: 0;
+      height: 768px;
+      width: 1241px; }
+      body .bg-img .main-warp .logo {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        width: 352px;
+        height: 45px;
+        background: url(../img/logo.png) no-repeat; }
+      body .bg-img .main-warp .header .login {
+        position: absolute;
+        top: 32px;
+        float: left;
+        margin-left: 89%; }
+        body .bg-img .main-warp .header .login a {
+          color: white;
+          font-size: 14px; }
+          body .bg-img .main-warp .header .login a:hover {
+            color: white;
+            text-decoration: none; }
+      body .bg-img .main-warp .logo2 {
+        position: absolute;
+        z-index: -1;
+        width: 128px;
+        height: 18px;
+        top: 85%;
+        margin-left: 6%; }
+      body .bg-img .main-warp .row {
+        padding-top: 130px;
+        width: 100%;
+        padding-left: 48px; }
+        body .bg-img .main-warp .row .col-md-3 {
+          text-align: center; }
+          body .bg-img .main-warp .row .col-md-3 .view {
+            width: 306px;
+            height: 137px;
+            display: none;
+            margin-left: -6%;
+            background: url(../img/tooltip-bg.png) no-repeat; }
+          body .bg-img .main-warp .row .col-md-3 p {
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: left; }
+          body .bg-img .main-warp .row .col-md-3 .img {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            text-align: center; }
+          body .bg-img .main-warp .row .col-md-3 .round {
+            padding-top: 30px;
+            background-color: #f9fffd;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; }
+            body .bg-img .main-warp .row .col-md-3 .round .img-1 {
+              width: 100px;
+              height: 100px;
+              background: url("../img/main-all.png") -98px -0px no-repeat; }
+            body .bg-img .main-warp .row .col-md-3 .round .img-2 {
+              width: 100px;
+              height: 100px;
+              background: url("../img/main-all.png") -98px -100px no-repeat; }
+            body .bg-img .main-warp .row .col-md-3 .round .img-3 {
+              width: 100px;
+              height: 100px;
+              background: url("../img/main-all.png") -98px -200px no-repeat; }
+            body .bg-img .main-warp .row .col-md-3 .round .img-4 {
+              width: 100px;
+              height: 100px;
+              background: url("../img/main-all.png") -98px -300px no-repeat; }
+            body .bg-img .main-warp .row .col-md-3 .round:hover ~ .view1, body .bg-img .main-warp .row .col-md-3 .round:hover ~ .view2, body .bg-img .main-warp .row .col-md-3 .round:hover ~ .view3, body .bg-img .main-warp .row .col-md-3 .round:hover ~ .view4 {
+              display: block; }
+            body .bg-img .main-warp .row .col-md-3 .round:hover {
+              background: #00BFFF;
+              cursor: pointer; }
+              body .bg-img .main-warp .row .col-md-3 .round:hover .img-1 {
+                background: url("../img/main-all.png") 0 -0px no-repeat; }
+              body .bg-img .main-warp .row .col-md-3 .round:hover .img-2 {
+                background: url("../img/main-all.png") 0 -100px no-repeat; }
+              body .bg-img .main-warp .row .col-md-3 .round:hover .img-3 {
+                background: url("../img/main-all.png") 0 -200px no-repeat; }
+              body .bg-img .main-warp .row .col-md-3 .round:hover .img-4 {
+                background: url("../img/main-all.png") 0 -300px no-repeat; }
+          body .bg-img .main-warp .row .col-md-3 .img-review {
+            width: 101px;
+            height: 22px;
+            background: url(../img/review-tit.png) no-repeat; }
+          body .bg-img .main-warp .row .col-md-3 .img-public {
+            width: 75px;
+            height: 23px;
+            background: url(../img/public-tit.png) no-repeat; }
+          body .bg-img .main-warp .row .col-md-3 .img-know {
+            width: 149px;
+            height: 21px;
+            background: url(../img/knowledge-tit.png) no-repeat; }
+          body .bg-img .main-warp .row .col-md-3 .img-law {
+            width: 124px;
+            height: 21px;
+            background: url(../img/lawrule-tit.png) no-repeat; }
+      body .bg-img .main-warp .box {
+        padding-left: 18px;
+        margin-top: 263px;
+        margin-left: -3%;
+        width: 104%;
+        height: 280px;
+        background-color: #f5f5f5; }
+        body .bg-img .main-warp .box .out-border {
+          position: relative;
+          float: left;
+          height: 252px;
+          top: 13px;
+          background-color: #f5f5f5;
+          border: 1px #d3d3d3 solid;
+          box-shadow: 1px 1px 7px #cfcfcf; }
+        body .bg-img .main-warp .box .box-border {
+          position: relative;
+          display: block;
+          top: 5px;
+          left: 4px;
+          float: left;
+          border: 1px #d3d3d3 solid;
+          box-shadow: 1px 1px 7px #cfcfcf; }
+        body .bg-img .main-warp .box .color-0 {
+          background: #81c685; }
+        body .bg-img .main-warp .box .color-1 {
+          background: #9775cc; }
+        body .bg-img .main-warp .box .color-2 {
+          background: #f3b505; }
+        body .bg-img .main-warp .box .color-3 {
+          background: #2bb5f6; }
+        body .bg-img .main-warp .box .color-4 {
+          background: #fe8880; }
+        body .bg-img .main-warp .box .box2-child2,
+        body .bg-img .main-warp .box .box2-child3 {
+          width: 98%;
+          height: 240px;
+          margin-right: 3%; }
+          body .bg-img .main-warp .box .box2-child2 .loader,
+          body .bg-img .main-warp .box .box2-child3 .loader {
+            margin-top: -51%; }
+        body .bg-img .main-warp .box .box2-child1 {
+          width: 95%;
+          height: 240px;
+          margin-right: 3%;
+          background-color: white; }
+          body .bg-img .main-warp .box .box2-child1 .loader {
+            margin-top: -177%; }
+          body .bg-img .main-warp .box .box2-child1 .num {
+            width: 100%;
+            height: 100%; }
+          body .bg-img .main-warp .box .box2-child1 strong {
+            font-size: 18px;
+            display: block;
+            margin-top: 15%;
+            text-align: center;
+            color: black; }
+          body .bg-img .main-warp .box .box2-child1 h3 {
+            text-align: center;
+            color: red; }
+        body .bg-img .main-warp .box .out-border-first {
+          width: 31%;
+          margin-left: 0;
+          margin-right: 2%; }
+          body .bg-img .main-warp .box .out-border-first .box1-child {
+            margin-right: 1%;
+            width: 98%;
+            height: 240px; }
+            body .bg-img .main-warp .box .out-border-first .box1-child .loader {
+              margin-top: -65%; }
+        body .bg-img .main-warp .box .out-border-ware-first {
+          width: 13%;
+          margin-left: 7px;
+          margin-right: 34px; }
+        body .bg-img .main-warp .box .out-border-ware {
+          width: 39%;
+          margin-left: -11px;
+          margin-right: 40px; }
+        body .bg-img .main-warp .box .loader {
+          width: 100%;
+          height: 100%;
+          background: url("../img/loading.gif") no-repeat center; }
+      body .bg-img .main-warp .box-size > div {
+        width: 16%;
+        height: 160px;
+        margin-left: 3%;
+        margin-top: 35px; }
+        body .bg-img .main-warp .box-size > div > strong {
+          color: black;
+          display: block;
+          width: 100%;
+          height: 75%;
+          font-size: 25px;
+          text-align: center;
+          padding-top: 25%;
+          background-color: white; }
+        body .bg-img .main-warp .box-size > div > h3 {
+          text-align: center;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          margin: 0 0;
+          font-size: 17px;
+          font-weight: 700; }
+      body .bg-img .main-warp .box-size .loader {
+        width: 102%;
+        height: 100%;
+        margin-left: -2%; }
+
+@media (max-width: 1024px) {
+  .bg-img {
+    width: 1024px;
+    height: 768px; }
+
+  .main-warp {
+    width: 1024px;
+    height: 768px; }
+
+  .row .col-md-3 {
+    float: left;
+    margin-right: 2%;
+    margin-left: -2%;
+    text-align: center; }
+
+  .col-md-3 .view {
+    margin-left: -19%; }
+
+  .box {
+    margin-left: -28px;
+    width: 102%; }
+
+  .out-border-ware-first {
+    width: 15%;
+    margin-right: 30px; }
+
+  .out-border-ware {
+    margin-right: 24px; }
+
+  .box1-child .loader {
+    margin-top: -80%; }
+
+  .box2-child2 .loader, .box2-child3 .loader {
+    margin-top: -65%; }
+
+  .out-border-ware-first .loader {
+    margin-top: -190%; } }
 
 /*# sourceMappingURL=index.css.map */
