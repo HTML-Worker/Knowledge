@@ -1,9 +1,5 @@
-@media(max-width: 1024px){
-  .bg-img {
-    width: 1024px;
-    height: 768px;
-  }
-  .main-warp {
+@media (max-width: 1024px) {
+  .bg-img, .main-warp {
     width: 1024px;
     height: 768px;
   }
@@ -30,8 +26,10 @@
   .box1-child .loader {
     margin-top: -80%;
   }
-
   .box2-child2 .loader, .box2-child3 .loader {
     margin-top: -65%;
+  }
+  .out-border-ware-first .loader {
+    margin-top: -190%;
   }
 }
