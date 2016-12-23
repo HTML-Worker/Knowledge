@@ -5,10 +5,6 @@
   color: white;
 }
 
-div {
-  display: block;
-}
-
 html {
   font-size: $fontSize;
 }
@@ -268,3 +264,44 @@ body {
       }
     }
   }
+@media(max-width: 1024px){
+  .bg-img {
+    width: 1024px;
+    height: 768px;
+  }
+  .main-warp {
+    width: 1024px;
+    height: 768px;
+  }
+  .row .col-md-3 {
+    float: left;
+    margin-right: 2%;
+    margin-left: -2%;
+    text-align: center;
+  }
+  .col-md-3 .view {
+    margin-left: -19%;
+  }
+  .box {
+    margin-left: -28px;
+    width: 102%;
+  }
+  .out-border-ware-first {
+    width: 15%;
+    margin-right: 30px;
+  }
+  .out-border-ware {
+    margin-right: 24px;
+  }
+  .box1-child .loader {
+    margin-top: -80%;
+  }
+
+  .box2-child2 .loader, .box2-child3 .loader {
+    margin-top: -65%;
+  }
+
+  .out-border-ware-first .loader {
+    margin-top: -190%;
+  }
+}
